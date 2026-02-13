@@ -4,6 +4,7 @@
 | **Hackathon** | VIT-SanDisk Hackathon 2026 |
 | **Organizer** | Vellore Institute of Technology |
 | **Hackathon URL** | [Event Page](https://docs.google.com/forms/d/e/1FAIpQLSf6Bz2VlbPMQEIv7JnoRLNjM7lbjk2iluQy75jr5wpdRv9Gzg/viewform) |
+| **Live Demo** | [View Dashboard](https://divyanshupatel.com/GuardianDrive-sandisk/) |
 | **Team Lead** | Divyanshu Patel |
 
 <br />
