@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GuardianDrive - Professional AMOLED Theme */
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 5%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 210 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 210 100% 50%;
+  --radius: 0.5rem;
+  
+  /* Custom GuardianDrive Colors - Professional Palette */
+  --gd-obsidian: #000000;
+  --gd-gunmetal: #0a0a0a;
+  --gd-charcoal: #111111;
+  /* Substituted Electric Blue with a professional Accent Blue */
+  --gd-electric-blue: #3b82f6; 
+  --gd-cyan: #0ea5e9;
+  --gd-success: #10b981;
+  --gd-warning: #f59e0b;
+  --gd-danger: #ef4444;
+  --gd-orange: #f97316;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Minimal Card */
+.gd-card {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  /* Removed heavy shadows and blurs */
+}
+
+/* Subtle Hover Effect */
+.gd-card:hover {
+  border-color: #333;
+}
+
+/* Removed Neon Glows (.gd-glow, .gd-glow-text) to meet minimal requirement */
+.gd-glow {
+  box-shadow: none;
+}
+
+.gd-glow-text {
+  text-shadow: none;
+}
+
+/* Health Score Colors - Flattened */
+.health-excellent { color: #10b981; }
+.health-good { color: #3b82f6; }
+.health-warning { color: #f59e0b; }
+.health-critical { color: #ef4444; }
+
+/* Gradient Borders - Removed for minimalism */
+.gd-gradient-border {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+}
+
+.gd-gradient-border::before {
+  display: none;
+}
+
+/* Animations - Subtle Fade Only */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* Status Indicators */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online { background: #10b981; }
+.status-dot.warning { background: #f59e0b; }
+.status-dot.critical { background: #ef4444; }
+
+/* Table Styles - Minimal */
+.gd-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gd-table th {
+  background: #000;
+  color: #888;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #222;
+}
+
+.gd-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #111;
+  color: #e5e5e5;
+}
+
+.gd-table tr:hover td {
+  background: #0f0f0f;
+}
+
+/* Button Styles - Professional */
+.gd-btn-primary {
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gd-btn-primary:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.gd-btn-secondary {
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gd-btn-secondary:hover {
+  background: #111;
+  border-color: #555;
+}
+
+/* Badge Styles - Muted */
+.gd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.gd-badge-hot {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.gd-badge-warm {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.gd-badge-cold {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.gd-badge-archive {
+  background: rgba(115, 115, 115, 0.1);
+  color: #737373;
+  border: 1px solid rgba(115, 115, 115, 0.2);
+}
+
+/* Chart Container */
+.gd-chart-container {
+  background: #0a0a0a;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #222;
+}
+
+/* Alert Banner */
+.gd-alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.gd-alert-critical {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.gd-alert-warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+/* Grid Pattern Background - Removed for total black */
+.bg-grid-pattern {
+  background: #000;
+}

@@ -1,0 +1,17 @@
+SanDisk Hackathon
+Track Name: AI/ML
+Theme Name: Intelligent Storage Management
+Problem Statement: 
+Detailed Architecture/Block Diagram: ./guardiandrive/docs/architecture_diagram.png
+Detailed Methodology: 
+1. Drive Health Prediction: Uses XGBoost on SMART metrics to predict failure probability.
+2. Access Pattern Analysis: Implements K-means clustering to classify data into Hot, Warm, Cold, and Archive tiers.
+3. Intelligent Tiering: Rule-based + ML engine optimizes costs by moving data between local SSD/HDD and cloud storage (S3).
+4. Compression Optimization: Calculates ROI for compression based on storage cost vs. compute cost.
+5. Multi-Cloud Arbitrage: Real-time pricing comparison to select the most cost-effective cloud provider.
+
+Deliverables Expected:
+- Functional AI-driven storage dashboard.
+- Predictive Maintenence Module.
+- Automated Tiering Engine.
+- API Documentation and Architecture Diagrams.
