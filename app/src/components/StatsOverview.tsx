@@ -32,7 +32,7 @@ const StatCard: React.FC<StatCardProps> = ({
   icon,
   trend,
   color,
-  glowColor
+  // glowColor - unused
 }) => {
   return (
     <div
@@ -90,7 +90,6 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ data }) => {
       title: 'Total Storage',
       value: `${(storage_summary.total_used_gb / 1024).toFixed(2)} TB`,
       subtitle: `of ${(storage_summary.total_capacity_gb / 1024).toFixed(2)} TB capacity`,
-      icon: <Database />,
       icon: <Database />,
       color: '#3b82f6',
       glowColor: '#3b82f6',

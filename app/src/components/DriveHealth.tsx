@@ -33,7 +33,7 @@ const HealthGauge: React.FC<{ score: number; size?: number }> = ({ score, size =
   };
 
   const color = getColor(score);
-  const glowColor = color + '40'; // Add transparency
+  // const glowColor = color + '40'; // Add transparency
 
   return (
     <div className="relative" style={{ width: size, height: size }}>
@@ -223,7 +223,7 @@ export const DriveHealth: React.FC<DriveHealthProps> = ({ drive, onClick }) => {
             Temperature
           </div>
           <span className={`text-lg font-semibold ${drive.temperature > 50 ? 'text-[#ff4757]' :
-              drive.temperature > 45 ? 'text-[#ffb800]' : 'text-[#00ff88]'
+            drive.temperature > 45 ? 'text-[#ffb800]' : 'text-[#00ff88]'
             }`}>
             {drive.temperature}°C
           </span>
@@ -282,8 +282,8 @@ export const DriveHealth: React.FC<DriveHealthProps> = ({ drive, onClick }) => {
       {/* Failure Prediction */}
       {drive.predicted_failure_days && (
         <div className={`mt-4 p-3 rounded-lg border ${drive.predicted_failure_days <= 7
-            ? 'bg-[#ff475715] border-[#ff475730] text-[#ff4757]'
-            : 'bg-[#ffb80015] border-[#ffb80030] text-[#ffb800]'
+          ? 'bg-[#ff475715] border-[#ff475730] text-[#ff4757]'
+          : 'bg-[#ffb80015] border-[#ffb80030] text-[#ffb800]'
           }`}>
           <div className="flex items-center gap-2">
             <AlertTriangle size={16} />

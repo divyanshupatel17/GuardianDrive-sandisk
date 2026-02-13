@@ -14,8 +14,22 @@
 
 ![Architecture Diagram](./guardiandrive/docs/architecture_diagram.png)
 
-### MVP Screenshot
-![MVP Screenshot](https://via.placeholder.com/800x400?text=GuardianDrive+Dashboard+MVP)
+### MVP Screenshots
+
+#### 1. Dashboard Overview
+![Overview](./guardiandrive/docs/mpv_1_overview.png)
+
+#### 2. Drive Health Monitor
+![Drive Health](./guardiandrive/docs/mvp_2_healthdrive.png)
+
+#### 3. Intelligent Tiering Plan
+![Tiering Plan](./guardiandrive/docs/mvp_3_tieringplan.png)
+
+#### 4. Compression Optimizer
+![Compression](./guardiandrive/docs/mvp_4_compression.png)
+
+#### 5. Multi-Cloud Orchestrator
+![Cloud Orchestrator](./guardiandrive/docs/mvp_5_cloud.png)
 
 ---
 
